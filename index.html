@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+   <meta name="description" content="conclusion webpage" />
+   <style>
+      table, th, td {
+        border:1px solid black;
+      }
+      </style>
+</head>
+
+<body>
+<h1 style="text-align: center; background-color: bisque;">Comparison between HTML-CSS and Bootstrap</h1>
+
+<table style="width:100% ; text-align: center;">
+   <tr>
+     <th>HTML-CSS</th>
+     <th>Bootstrap</th>
+     
+   </tr>
+   <tr>
+     <td>
+      <ol>
+         <li>
+            Using pure HTML and CSS, I was initially able to use media queries to implement a basic responsive website.
+         </li>
+         <li>
+            However, when I looked at how Bootstrap uses a grid system for layout of elements, I decided to try a similar approach with CSS to get a better idea of what might be going on.
+         </li>
+         <li>
+            It required a bit of setup with grid-template-areas and manually setting up how these grid areas should be placed for a given width via a media query - something that came out of the box with Bootstrap.
+         </li>
+         <li>
+            Adding Bootstrap was very easy by just adding a link to the Bootstrap CSS file in the head of the HTML page.
+         </li>
+      </ol> 
+     </td>
+
+     <td>
+     <ol>
+      <li>
+         When it came time to implement that design in Bootstrap, I encountered an issue whereby on desktop size class, with the pure CSS approach I was able to easily have the entire left side be the nav div. I found it much less obvious of how to do this with Bootstrap.
+      </li>
+      <li>
+         Since Bootstrap is simply providing CSS classes, I could specify 'col-md' to make the nav break for the size I wanted it to break, but realized that the way my CSS is set up, since there are only 2 children (nav and content) each takes up half the screen space, where I only want the nav to take up a small section.
+      </li>
+      <li>
+         I could still use media queries to change the background colour of the nav for each size class. I can see that Bootstrap is more opinionated than the pure CSS appraoch - for example it has its own default font, margins, the appraoch it takes to layout elements, default breakpoints to swap between size classes.
+      </li>
+     </ol>
+
+     </td>
+   </tr>
+   
+ </table>
+
+
+ <article>
+   <h2>
+      what I think...?
+   </h2>
+   <h3 style="background-color: rgb(184, 184, 220) ; margin: 100% rgb(170, 0, 255)">
+      From further reading I can see this opinionated approach goes deeper in the framework than what I've used here, which I can imagine means it is easy to create a basic or prototype page using Bootstrap, but will not work well with highly customized looking sites, since the framework will want to work in its own way and I would have to 'fight' it to make it work the way I need. For this lab, the amount of CSS needed for the Bootstrap approach is much less because it's making use of the framework's provided 'container', 'row', and various size classs (in this case 'col-sm'), which meant it was faster to create the page design. Overall I think Bootstrap is a great way to spin up a prototype page or page that conforms to a design system that is more simple, but would be hesitent to use the framework for highly custom webpages.
+   </h3>
+ </article>
+<nav style="border: 1px solid black ; ">
+<h2>Links to websites :</h2>
+<ul>  
+	<li><a href="lab03a.html">CSS</a></li>
+   <li><a href="lab03b.html">Bootstrap</a></li>
+</ul>   
+</nav>
+
+</body>
+</html>

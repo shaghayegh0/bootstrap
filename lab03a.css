@@ -1,0 +1,77 @@
+/* Give the classes names so we can use them in grid-template-areas properties */
+.main-head {
+    grid-area: header;
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.content {
+   grid-area: content;
+}
+
+.main-nav {
+    grid-area: nav;
+   background-color: green;
+   border-radius: 25px;
+}
+
+.main-footer {
+    grid-area: footer;
+}
+
+/* This is so the images fit the size of the screen width while keeping the correct aspect ratio */
+.content img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* The 'default' which is for mobile. The grid-template-areas is how much space the grid-area properties will take up */
+.wrapper {
+   display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "header"
+    "nav"
+     "content"
+    "footer";
+}
+
+/* A media query so that when the screeen has a minimum width of 500px (e.g. tablet), this wrapper is used instead with two columns */
+@media screen and (min-width: 500px) {
+ .wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+     "header  header"
+     "nav     nav"
+     "content content"
+     "footer  footer";
+ }
+ nav ul {
+    display: flex;
+    justify-content: space-between;
+ }
+   .main-nav {
+       background-color: orange;
+   }
+}
+
+/* A media query so that when the screen has a minimum size of 700px (desktop) this wrapper is usef with 3 columns. Specifying header at the top of the 'grid-template-areas' will mean the header will take up that entire row */
+@media screen and (min-width: 700px) {
+ .wrapper {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      "header header  header"
+      "nav    content content"
+      "nav    content content"
+      "footer footer  footer";
+ }
+ nav ul {
+    flex-direction: column;
+ }
+   .main-nav {
+       background-color: pink;
+   }
+}

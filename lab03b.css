@@ -1,0 +1,29 @@
+.content img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ 
+ .main-nav {
+   grid-area: nav;
+     border-radius: 25px;
+     background-color: green;
+ }
+ 
+ .wrapper {
+   margin: 20px;
+ }
+ 
+ @media screen and (min-width: 500px) {
+     .main-nav {
+         background-color: orange;
+     }
+ }
+ 
+ @media screen and (min-width: 700px) {
+     .main-nav {
+         background-color: pink;
+     }
+ }
